@@ -1,0 +1,15 @@
+<div *ngIf="results.length == 0">
+    <p>Update Movie by Index</p>
+    <p>Id</p>
+    <input type="number" [(ngModel)]="id" />
+    <p>Title</p>
+    <input type="string" [(ngModel)]="title" />
+    <p>Release Year</p>
+    <input type="number" [(ngModel)]="releaseYear" />
+    <p>Genre Id</p>
+    <input type="number" [(ngModel)]="genre" />
+    <button (click)="updateMovie()">Update</button>
+</div>
+<div *ngFor="let result of results">
+    <p>{{result.title}}</p>
+</div>

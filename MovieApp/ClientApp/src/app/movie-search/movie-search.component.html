@@ -1,0 +1,10 @@
+<div *ngIf="results.length == 0">
+    <p>Search Movies by Title</p>
+    <input type="text" [(ngModel)]="searchTerm" />
+    <button (click)="searchMovies()">Search</button>
+</div>
+<div *ngFor="let result of results">
+    <p>{{result.title}}</p>
+    <p>{{result.releaseYear}}</p>
+    <p>{{result.genre}}</p>
+</div>
